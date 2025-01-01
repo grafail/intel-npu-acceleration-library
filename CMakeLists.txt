@@ -65,7 +65,7 @@ elseif(UNIX)
 
                 set(OV_LIBRARY_URL "${OV_STORAGE_URL}/${OV_VERSION_SHORT}/${OV_PLATFORM}/l_openvino_toolkit_ubuntu${LSB_RELEASE_VERSION_SHORT}_${OV_VERSION}.tgz")
             else()
-                message(FATAL_ERROR "Ubuntu version ${LSB_RELEASE_VERSION} is unsupported")
+                set(OV_PLATFORM "linux")
             endif()
         else()
             message(FATAL_ERROR "Linux distribution ${LSB_RELEASE_ID} is unsupported")
